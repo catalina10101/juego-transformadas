@@ -1,0 +1,8 @@
+TRANSFORMACIONES
+
+
+	TO DO
+		destroy card object after used and after animation.
+		delete cards button
+		
+		
