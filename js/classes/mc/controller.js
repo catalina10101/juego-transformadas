@@ -18,9 +18,9 @@ class Controller{
         model.score = score;
     }
 
-    upPoints(points){
-            let score =model.score;
-            score +=points;
-            model.score = score;
+    upPoints(params){
+        let currScore = model.getPlayerScore(params.player);
+        currScore += params.points;
+        model.setPlayerScore(params.player, currScore);        
     }
 }

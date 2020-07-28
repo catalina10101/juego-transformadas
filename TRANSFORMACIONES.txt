@@ -1,8 +1,27 @@
 TRANSFORMACIONES
+FTP:
+	FileZilla > archivo > gestor de sitios.
+	IP: 107.180.21.14 (ftp.educando-centennials.com no funciono)
+	user: ftpcatalina10101@educando-centennials.com :Millenium13
+	port: 21
+	
+	
+----
 
-
-	TO DO
+	TO DO				
+		restart winner var
+		scorebox: el q atrape 3 gana
+		q no se puedan aplicar las cartas al meme del otro.
+		balancear deck cards
 		destroy card object after used and after animation.
-		delete cards button
-		
+		reuse tweens and times created in transforms file.
+azul cartas: 52,101,164	
+
+---*** TEMA COLORES ***--------
+
+#00FFFF aguamarina rgb(0,255,255)
+#8000FF morado     rgb(128,0,255)
+#FF0000 rojo       rgb(255,0,0)
+#80FF00 verde      rgb(128,255,0)
+
 		

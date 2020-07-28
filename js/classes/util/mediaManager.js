@@ -17,7 +17,7 @@ class MediaManager{
 
     playSound(key){
         if(model.soundOn == true){
-            let sound = this.scene.sound.add(key);
+            let sound = this.scene.sound.add(key, {volume: 1.5});
             sound.play();
         }
     }

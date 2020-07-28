@@ -41,22 +41,27 @@ class CardContainer extends Phaser.GameObjects.Container {
         card.y = G.CARD_HEIGHT* this.cardMargin/2;
         //card.setOrigin(0.5, 0.5);                
         card.Show();
+        //console.log("card added at: ", index, ", cid: ", card.ID, "xy", card.x, card.y, ", scaleXY: ", card.scaleX, card.scaleY);
     }
 
-    RemoveCard(card){
-        card.Delete();
-        let cardIDs = this.handCards.map(c=> c.ID);
+    RemoveCard(card){        
+        let cardIDs = this.handCards.map(c=> c==null? 0: c.ID);
         let idx = cardIDs.indexOf(card.ID);
         this.handCards[idx] = null;
+        card.Delete();
     }
 
     RefillContainer(cardsArr){
         for(let i =0; i< this.size; i++){
             if( (this.handCards[i] == undefined || this.handCards[i] == null) && cardsArr.length > 0){
                 let card =  cardsArr.pop();
-                this.AddCard(card, i);
+                this.AddCard(card, i);                               
             }
         }
+        this.scene.tweens.add({targets: this.handCards, duration: 1000, 
+            scaleX: 1,
+            scaleY: 1
+        });
     }
     
 }
