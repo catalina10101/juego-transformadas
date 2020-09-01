@@ -1,9 +1,5 @@
 TRANSFORMACIONES
-FTP:
-	FileZilla > archivo > gestor de sitios.
-	IP: 107.180.21.14 (ftp.educando-centennials.com no funciono)
-	user: ftpcatalina10101@educando-centennials.com :Millenium13
-	port: 21
+
 	
 	
 ----

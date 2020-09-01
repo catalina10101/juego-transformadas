@@ -34,6 +34,9 @@ window.onload = function (){
    
     model = new Model();
     model.isMobile = isMobile != -1; //true;
-    game = new Phaser.Game(config);
-    G = new Constants();
+    let parentDiv = document.querySelector('#emoticones-game'); //$('#emoticones-game'); 
+    if(parentDiv != null){
+        game = new Phaser.Game(config);
+        G = new Constants();
+    }
 }

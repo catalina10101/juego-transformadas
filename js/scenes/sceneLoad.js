@@ -8,33 +8,31 @@ class SceneLoad extends Phaser.Scene {
         this.progText.setOrigin(0.5,0.5);
         this.load.on('progress', this.onProgress, this);
         
-        this.load.image("title", "images/title-blue.png");
-        this.load.image("fondo", "images/fondo.png");
-        this.load.image("emoticon1", "images/emoticon1.jpg");
-        this.load.image("emoticon2", "images/emoticon2.jpg");
-        this.load.image("emoticon3", "images/emoticon3.jpg");
-        this.load.image("emoticon4", "images/emoticon4.jpg");
-        this.load.image("emoticon5", "images/emoticon5.jpg");
-        this.load.image("emoticon6", "images/emoticon6.jpg");
-        this.load.image("player1", "images/player1.jpg");
-        this.load.image("player2", "images/player22.jpg");
+        let pluginPath = ""; //wpa_data.plugin_path;
+        this.load.image("title",  pluginPath+ "images/title-blue.png");
+        this.load.image("fondo",  pluginPath+"images/fondo.png");
+        this.load.image("emoticon1",  pluginPath+"images/emoticon1.jpg");
+        this.load.image("emoticon2",  pluginPath+"images/emoticon2.jpg");
+        this.load.image("emoticon3",  pluginPath+"images/emoticon3.jpg");
+        this.load.image("player1",  pluginPath+"images/player1.jpg");
+        this.load.image("player2",  pluginPath+"images/player22.jpg");
         //card's images
-        this.load.image("arrowX", "images/arrowX.png");
-        this.load.image("arrowY", "images/arrowY.png");
-        this.load.image("mirrorX", "images/mirrorX.png");
-        this.load.image("mirrorY", "images/mirrorY.png");
-        this.load.image("angle", "images/angle.png");
+        this.load.image("arrowX",  pluginPath+"images/arrowX.png");
+        this.load.image("arrowY",  pluginPath+"images/arrowY.png");
+        this.load.image("mirrorX",  pluginPath+"images/mirrorX.png");
+        this.load.image("mirrorY",  pluginPath+"images/mirrorY.png");
+        this.load.image("angle",  pluginPath+"images/angle.png");
 
-        this.load.image("button1", "images/ui/buttons/2/1.png");
-        this.load.image("button2", "images/ui/buttons/2/2.png");
-        this.load.audio('memeAtrapado', ["audio/memeAtrapado.mp3","audio/memeAtrapado.ogg"]);
-        this.load.audio('backgroundMusic', ["audio/Greeting_the_Day_with_a_Smile.mp3","audio/Greeting_the_Day_with_a_Smile.ogg"]);
+        this.load.image("button1",  pluginPath+"images/ui/buttons/2/1.png");
+        this.load.image("button2",  pluginPath+"images/ui/buttons/2/2.png");
+        this.load.audio('memeAtrapado', [ pluginPath+"audio/memeAtrapado.mp3", pluginPath+"audio/memeAtrapado.ogg"]);
+        this.load.audio('backgroundMusic', [ pluginPath+"audio/Greeting_the_Day_with_a_Smile.mp3", pluginPath+"audio/Greeting_the_Day_with_a_Smile.ogg"]);
 
-        this.load.image('toggleBack', "images/ui/toggles/1.png");
-        this.load.image('sfxOff', "images/ui/icons/sfx_off.png");
-        this.load.image('sfxOn', "images/ui/icons/sfx_on.png");
-        this.load.image('musicOn', "images/ui/icons/music_on.png");
-        this.load.image('musicOff', "images/ui/icons/music_off.png");
+        this.load.image('toggleBack',  pluginPath+"images/ui/toggles/1.png");
+        this.load.image('sfxOff',  pluginPath+"images/ui/icons/sfx_off.png");
+        this.load.image('sfxOn',  pluginPath+"images/ui/icons/sfx_on.png");
+        this.load.image('musicOn',  pluginPath+"images/ui/icons/music_on.png");
+        this.load.image('musicOff',  pluginPath+"images/ui/icons/music_off.png");
     }
     create(){
         this.scene.start("SceneTitle");
